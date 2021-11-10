@@ -1,0 +1,52 @@
+const emp = [{
+    "emp_id": 1,
+    "first_name": "Shalom",
+    "last_name": "Barhem",
+    "email": "sbarhem0@twitpic.com"
+}, {
+    "emp_id": 2,
+    "first_name": "Caria",
+    "last_name": "Di Baudi",
+    "email": "cdibaudi1@blogspot.com"
+}, {
+    "emp_id": 3,
+    "first_name": "Giraud",
+    "last_name": "Ridgers",
+    "email": "gridgers2@phpbb.com"
+}, {
+    "emp_id": 4,
+    "first_name": "Madelle",
+    "last_name": "Huntar",
+    "email": "mhuntar3@opera.com"
+}, {
+    "emp_id": 5,
+    "first_name": "Barbaraanne",
+    "last_name": "Lobb",
+    "email": "blobb4@webs.com"
+}, {
+    "emp_id": 6,
+    "first_name": "Karyn",
+    "last_name": "Peter",
+    "email": "kpeter5@nps.gov"
+}, {
+    "emp_id": 7,
+    "first_name": "Vance",
+    "last_name": "Mallender",
+    "email": "vmallender6@cocolog-nifty.com"
+}, {
+    "emp_id": 8,
+    "first_name": "Farah",
+    "last_name": "Oboy",
+    "email": "foboy7@taobao.com"
+}, {
+    "emp_id": 9,
+    "first_name": "Jackquelin",
+    "last_name": "Boyen",
+    "email": "jboyen8@abc.net.au"
+}, {
+    "emp_id": 10,
+    "first_name": "Leonard",
+    "last_name": "Boreland",
+    "email": "lboreland9@amazon.de"
+}]
+module.exports = emp;
