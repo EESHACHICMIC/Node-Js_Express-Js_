@@ -2,8 +2,11 @@ const express = require('express')
 const app = express();
 var bodyParser = require('body-parser') //it is neccessary to import when we will read data from body
 app.use(express.json());
+const fs = require('fs')
+// fs.writeFileSync('abc.txt',"my name is md eesha")
+
 const port = 5000;
-const employee = require('./employee');
+const employee = require('./employee')
 const emp = require('./employee');
 app.get('/', (req, res) => {
     res.send({ 'message': 'Api is working..' })
@@ -26,10 +29,6 @@ app.get('/api/emp/search', (req, res) => {
 
 //POST request for inserting new records into the json object
 app.post('/api/emp', (req, res) => {
-    let first_name = req.body.first_name;
-    let last_name = req.body.last_name;
-    let email = req.body.email;
-    console.log(first_name, last_name, email);
 
     let newEmp = {
         emp_id: employee.length + 1,
@@ -39,6 +38,7 @@ app.post('/api/emp', (req, res) => {
     }
 
     employee.push(newEmp);
+    // fs.writeFile(employee.js, JSON.stringify(newEmp));
     res.json(newEmp)
 
 })
