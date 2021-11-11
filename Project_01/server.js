@@ -10,6 +10,43 @@ const employee = require('./employee')
 const emp = require('./employee');
 app.get('/', (req, res) => {
     res.send({ 'message': 'Api is working..' })
+
+})
+
+//Pagination...
+
+app.get('/emp', (req, res) => {
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.limit);
+    // res.json(employee)
+
+    const startIndex = (page - 1) * limit;
+    const endIndex =page*limit;
+
+    console.log(`Start: ${startIndex}  End:${endIndex}`);
+    const results = {};
+
+
+    if (endIndex < employee.length) {
+        results.next = {
+            page: page + 1,
+            limit: limit
+
+        }
+    }
+
+    if (startIndex > 0) {
+        results.previous = {
+            page: page - 1,
+            limit: limit
+        }
+    }
+
+    results.results = employee.slice(startIndex, endIndex);
+
+    res.json(results);
+
+
 })
 
 //GET Request for display all json data 

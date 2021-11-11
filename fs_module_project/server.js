@@ -5,8 +5,6 @@ app.use(express.json())
 const port = 5000;
 //const employee = require('./employee')
 const fs = require("fs");
-const { resolve } = require('dns');
-const { Console } = require('console');
 let data = JSON.parse(fs.readFileSync('./employee.json'))
 app.get('/', (req, res) => {
     res.json({ 'message': 'API is working...', data: data })
