@@ -89,7 +89,7 @@ app.delete('/api/emp/:id', (req, res) => {
 })
 
 
-//PUT request for updating the existing record into the array of object
+//PUT request forsudo kill -9 `sudo lsof -t -i:9001` updating the existing record into the array of object
 app.put('/api/emp/:id', (req, res) => {
     let id = req.params.id;
     let first_name = req.body.first_name;
